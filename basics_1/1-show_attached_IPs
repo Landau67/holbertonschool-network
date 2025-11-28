@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 #Show attached IPs
-echo "127.0.0.1"
-hostname -I
+ifconfig | grep 'inet' | awk '{print $2}'
